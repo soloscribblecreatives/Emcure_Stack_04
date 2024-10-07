@@ -1,11 +1,11 @@
 /*Code by android developers start here*/
+
 var startLoc = null;
 //var contentName = '152';
 //step 1:-
 var contentName = parseInt(localStorage.getItem("currentbrand"));
 var currentContentId  = parseInt(localStorage.getItem('currentcontent'));
 //ends
-
 checkClickThrough();
 
 document.getElementById("main_content").addEventListener("touchmove", touchHandler, false);
@@ -69,6 +69,7 @@ function touchHandler(e) {
 
 		$("#main_content").swipe({
 	   swipeLeft:function(event, direction, distance, duration, fingerCount) {
+		
 		//alert("swipeleft");
 		//myconsole("swipeleft");
 		var page_id =  parseInt($("#wrapper").attr("rel"));
@@ -82,6 +83,7 @@ function touchHandler(e) {
 	  },
 
 	  swipeRight:function(event, direction, distance, duration, fingerCount) {
+		
 			//alert("swiperight");
 		//myconsole("swiperight");
 		var page_id =  parseInt($("#wrapper").attr("rel"));
@@ -100,10 +102,7 @@ function touchHandler(e) {
         //Default is 75px, set to 0 for demo so any distance triggers swipe
          threshold:0
 	});
-
-
 });
-
 
 function go_nav(direction) {
 var page_id =  parseInt($("#wrapper").attr("rel"));
@@ -136,7 +135,7 @@ if(direction == 'b') {
   "callback" : "checkLastPgFn"
   };
 
-	window.messageHandler.postMessage(JSON.stringify(params)); //pageswipe
+	//window.messageHandler.postMessage(JSON.stringify(params)); //pageswipe
 	
 		//window.location = "js-call:" + "1" + ":" + encodeURIComponent(JSON.stringify({query:'NODATA', type:'brandNavigation', callback:'checkLastPgFn'}));
     }else{
@@ -153,16 +152,16 @@ if(direction == 'b') {
   "callback" : "checkLastPgFn"
   };
 
-	window.messageHandler.postMessage(JSON.stringify(params)); //pageswipe
+	//window.messageHandler.postMessage(JSON.stringify(params)); //pageswipe
 	}
 	
 }else {
 	
 
-	if(page_id <= 1){
+	if(page_id <= 5){
 		page_id = page_id + 1;
 		//alert(page_id);
-		if(page_id == 2){
+		if(page_id == 6){
             flag=1;
         }
 	}
@@ -182,7 +181,7 @@ if(direction == 'b') {
   };
 
 
-	window.messageHandler.postMessage(JSON.stringify(params)); //pageswipe
+	//window.messageHandler.postMessage(JSON.stringify(params)); //pageswipe
 		 //window.location = "js-call:" + "1" + ":" + encodeURIComponent(JSON.stringify({query:'NODATA', type:'brandNavigation', callback:'checkLastPgFn'}));
     }else{
         localStorage.setItem("gotoNextPrevBrand" ,0);
@@ -198,7 +197,7 @@ if(direction == 'b') {
   "callback" : "checkLastPgFn"
   };
 
-	window.messageHandler.postMessage(JSON.stringify(params)); //pageswipe
+	//window.messageHandler.postMessage(JSON.stringify(params)); //pageswipe
   
     }
 
@@ -244,14 +243,28 @@ var pg_content = set_pg_content(page_id);
 }
 
 function set_pg_content(pg_id){
+//step 6:-
+//console.log("++++++++pg_id++++"+pg_id+"+++++++currentslide++++++"+localStorage.getItem("currentslide")+"++++++previousslide++++++"+localStorage.getItem("previousslide"));
+		
 $(".reference").removeClass("active");
 currentSlide();
 var selectedContentPath='';
 switch(pg_id){
 	case 1:
-	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="s1"><img src="slide1/s1.png" width="1080" height="810" alt=""></div><div class="s2"><img src="slide1/s2.gif"/></div><div class="s3"><img src="slide1/s3.png"/></div><div class="s4"><img src="slide1/s4.png"/></div><div class="s5"><img src="slide1/s5.png"/></div><div class="s6"><img src="slide1/s6.png"/></div><div class="s7"><img src="slide1/s7.png"/></div>';
+	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="s1"><img src="slide1/s1.png" width="1080" height="810" alt=""></div><div class="s2"><img src="slide1/s2.png"/></div><div class="s3"><img src="slide1/s3.png"/></div><div class="s4"><img src="slide1/s4.png"/></div><div class="s5"><img src="slide1/s5.png"/></div>';
 	break;
-
+	case 2:
+	content='<link rel="stylesheet" type="text/css" href="slide2/slide2.css" media="screen"/><div class="s1"><img src="slide2/s1.png" width="1080" height="810" alt=""></div><div class="s2"><img src="slide2/s2.png"/></div><div class="s3"><img src="slide2/s3.png"/></div><div class="s4"><img src="slide2/s4.png"/></div><div class="s5"><img src="slide2/s5.png"/></div><div class="s6"><img src="slide2/s6.png"/></div>';
+	break;
+    case 3:
+	content='<link rel="stylesheet" type="text/css" href="slide3/slide3.css" media="screen"/><div class="s1"><img src="slide3/s1.png" width="1080" height="810" alt=""></div><div class="s2"><img src="slide3/s2.gif"/></div><div class="s3"><img src="slide3/s3.gif"/></div><div class="s4"><img src="slide3/s4.png"/></div><div class="s5"><img src="slide3/s5.png"/></div><div class="s6"><img src="slide3/s6.png"/></div><div class="s7"><img src="slide3/s7.png"/></div><div class="s8"><img src="slide3/s8.png"/></div><div class="s9"><img src="slide3/s9.png"/></div>';
+	break;
+    case 4:
+	content='<link rel="stylesheet" type="text/css" href="slide4/slide4.css" media="screen"/><div class="s1"><img src="slide4/s1.png" width="1080" height="810" alt=""></div><div class="s2"><img src="slide4/s2.gif"/></div><div class="s3"><img src="slide4/s3.gif"/></div><div class="s4"><img src="slide4/s4.png"/></div><div class="s5"><img src="slide4/s5.png"/></div><div class="s6"><img src="slide4/s6.png"/></div><div class="s7"><img src="slide4/s7.png"/></div><div class="s8"><img src="slide4/s8.png"/></div>';
+	break;
+	case 5:
+	content='<link rel="stylesheet" type="text/css" href="slide4/slide4.css" media="screen"/><div class="s1"><img src="slide5/s1.png" width="1080" height="810" alt=""></div>';
+	break;
 }
 
 return content;
@@ -264,6 +277,7 @@ function showDiv() {
 function showDiv2() {
    document.getElementById('welcomeDiv2').style.display = "block";
 }
+
 
 function open_page(url,page_id){
 	 //alert("===openpage====");
@@ -290,8 +304,8 @@ function open_page(url,page_id){
   "callback" : "checkLastPgFn"
   };
 
-	window.messageHandler.postMessage(JSON.stringify(params)); //pageswipe
-
+	//window.messageHandler.postMessage(JSON.stringify(params)); //pageswipe
+	
 	 $("#wrapper").attr("rel",page_id);
 	 var content="";
 	 var pg_content = set_pg_content(page_id);
@@ -335,6 +349,7 @@ function open_page(url,page_id){
     if(currentslide == 2){
 	document.getElementById("click_through").innerHTML='';
 		}
+
 	}
 
 	function checkBtns(refNum){
@@ -390,8 +405,6 @@ function currentTimeInDatabaseFormat(){//to get current time in dd-mm-yyyy hh:mm
 	var duration= year+"-"+month+"-"+date+"-"+hour + ":" + minutes + ":" + seconds;
 	return duration;
 }
-
-// new js
 
 $(document).ready(function(){
 	$('body').on('click','.touchbtn',function(){

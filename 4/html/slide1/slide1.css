@@ -12,47 +12,46 @@
 
 .s2 {
 	position: absolute;
-  left: 91px;
-  top: 65px;
-  width: 225px;
-  height: 96px;
-	animation: slideInUp 0.5s;
+  left: 207px;
+  top: 105px;
+  width: 666px;
+  height: 138px;
+	animation: none 0.5s;
 	animation-delay: 0.1s;
 	animation-fill-mode: both;
-	z-index: 7;
+	z-index: 5;
 }
 
 .s3 {
 	position: absolute;
-  left: 94px;
-  top: 107px;
-  width: 497px;
-  height: 179px;
-	animation: zoomIn 0.5s;
-	animation-delay: 0.3s;
+  left: 379px;
+  top: 422px;
+  width: 315px;
+  height: 100px;
+	animation: fadeInRight 0.5s;
+	animation-delay: 0.6s;
 	animation-fill-mode: both;
-	transform-origin: top left;
 	z-index: 5;
 }
 
 .s4 {
 	position: absolute;
-  left: 120px;
-  top: 168px;
-  width: 445px;
-  height: 96px;
-	animation: fadeInUpSmall 0.5s;
-	animation-delay: 0.5s;
+  left: 720px;
+  top: 422px;
+  width: 315px;
+  height: 100px;
+	animation: fadeInRight 0.5s;
+	animation-delay: 0.9s;
 	animation-fill-mode: both;
 	z-index: 5;
 }
 
 .s5 {
 	position: absolute;
-  left: 94px;
-  top: 569px;
-  width: 394px;
-  height: 78px;
+  left: 498px;
+  top: 534px;
+  width: 357px;
+  height: 100px;
 	animation: fadeInRight 0.5s;
 	animation-delay: 1.2s;
 	animation-fill-mode: both;
@@ -61,25 +60,24 @@
 
 .s6 {
 	position: absolute;
-  left: 227px;
-  top: 582px;
-  width: 428px;
-  height: 176px;
-	animation: revealHorizontal 1.5s;
-	animation-delay: 1.5s;
+  left: 614px;
+  top: 657px;
+  width: 90px;
+  height: 90px;
+	animation: zoomIn 0.3s;
+	animation-delay: 2s;
 	animation-fill-mode: both;
-	clip: rect(0px,0px,200px,0px);
 	z-index: 5;
 }
 
 .s7 {
 	position: absolute;
-  left: 465px;
-  top: 272px;
-  width: 155px;
-  height: 155px;
-	animation: bounceIn 0.3s;
-	animation-delay: 1.8s;
+  left: 718px;
+  top: 681px;
+  width: 74px;
+  height: 45px;
+	animation: fadeInRight 0.3s;
+	animation-delay: 2.2s;
 	animation-fill-mode: both;
 	z-index: 5;
 }
@@ -103,31 +101,5 @@
 
   25%, 75% {
     opacity: 1;
-  }
-}
-
-@keyframes fadeInUpSmall {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(0, 30%, 0);
-    transform: translate3d(0, 30%, 0);
-  }
-
-  to {
-    opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-@keyframes revealHorizontal {
-  0% {
-    clip: rect(0px,0px,200px,0px);
-	opacity: 1;
-  }
-  
-  100% {
-    clip: rect(0px,450px,200px,0px);
-	opacity: 1;
   }
 }
