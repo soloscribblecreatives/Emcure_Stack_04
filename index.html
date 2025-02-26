@@ -1,59 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta http-equiv="cache-control" content="max-age=200"/>
-<meta name="viewport" content="initial-scale=1, maximum-scale=1" />
-<meta http-equiv="X-UA-Compatible" content="chrome=1">
-<title>Asomex Survey</title>
-<link rel="stylesheet" type="text/css" href="animate.css" media="screen"/>
-<link rel="stylesheet" type="text/css" href="global.css" media="screen"/>
-
-<script src="jquery.min.js" type="text/javascript" language="javascript"></script>
-<script src="jquery.mobile.custom.min.js" type="text/javascript" language="javascript"></script>
-<script src="jquery.touchSwipe.min.js" type="text/javascript" language="javascript"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chirality Match Game</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        .game-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 50px;
+        }
+        .molecule {
+            width: 100px;
+            height: 100px;
+            cursor: pointer;
+            border: 2px solid transparent;
+        }
+        #message {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
 </head>
-
 <body>
-<div id="wrapper" rel="1">
-  <div class="slide_arrow">
-    <div class="left_arrow" ><img src="left_arrow.png" alt="previous icon" width="23" height="23" ></div>
-    <div class="right_arrow" ><img src="right_arrow.png" alt="next icon" width="23" height="23"></div>
-  </div>
-  <div id="main_content"></div>
-  <div class="reference active">
-    <div class="box">
-      <div class="slide_jumper">
-		  <div class="slides"><img src="thumbs/01.png" alt=""></div>
-		  <div class="slides"><img src="thumbs/02.png" alt=""></div>
-		  <div class="slides"><img src="thumbs/03.png" alt=""></div>
-		  <div class="slides"><img src="thumbs/04.png" alt=""></div>
-		  <div class="slides"><img src="thumbs/05.png" alt=""></div>
-		  <div class="slides"><img src="thumbs/06.png" alt=""></div>
-		  <div class="slides"><img src="thumbs/07.png" alt=""></div>
-		  <div class="slides"><img src="thumbs/08.png" alt=""></div>
-      </div>
-    </div>
-    <div class="box_btn"></div>
-	<div id="myconsole"></div>
-	<div id="click_through"></div>
-  </div>
-</div>
+    <h1>Chirality Match Game</h1>
+    <p>Match the chiral molecule pairs</p>
+    <div class="game-container" id="gameBoard"></div>
+    <p id="message"></p>
 
-<script src="global.js" type="text/javascript" language="javascript"></script> 
-<script>
+    <script>
+        const molecules = [
+            { id: 1, src: "molecule.png", pair: 2 },
+            { id: 2, src: "molecule.png", pair: 1 },
+            { id: 3, src: "molecule.png", pair: 4 },
+            { id: 4, src: "molecule.png", pair: 3 },
+            { id: 5, src: "molecule.png", pair: 6 },
+            { id: 6, src: "molecule.png", pair: 5 },
+            { id: 7, src: "molecule.png", pair: 8 },
+            { id: 8, src: "molecule.png", pair: 7 },
+            { id: 9, src: "molecule.png", pair: 10 },
+            { id: 10, src: "molecule.png", pair: 9 }
+        ];
 
-$(document).ready(function(){
-  // jQuery(".next").bind(event, function(){
-  //     document.location = 'VoltarenVAsb/VoltarenVAsb.html';
-  //     });
-var selectedContentPath = 'slide1/';
-//  document.getElementById("main_content").innerHTML='<object type="text/html" width="1080px" height="810px" data="'+selectedContentPath+"Dlight1.htm"+'"></object>';
+        let selected = [];
+        let matchedPairs = 0;
 
+        function createGameBoard() {
+            const shuffledMolecules = molecules.sort(() => 0.5 - Math.random());
+            const gameBoard = document.getElementById("gameBoard");
+            shuffledMolecules.forEach(molecule => {
+                const img = document.createElement("img");
+                img.src = molecule.src;
+                img.classList.add("molecule");
+                img.dataset.id = molecule.id;
+                img.onclick = () => selectMolecule(img, molecule);
+                gameBoard.appendChild(img);
+            });
+        }
 
-$("#main_content").html('<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="s1"><img src="slide1/s1.png" width="1080" height="810"/></div><div class="s2"><img src="slide1/s2.png"></div>');
-});
-</script> 
+        function selectMolecule(img, molecule) {
+            if (selected.length < 2) {
+                selected.push({ img, molecule });
+                img.style.border = "2px solid blue";
+            }
+            if (selected.length === 2) {
+                checkMatch();
+            }
+        }
 
+        function checkMatch() {
+            const [first, second] = selected;
+            if (first.molecule.pair === second.molecule.id) {
+                document.getElementById("message").textContent = "Chiral bond formed!";
+                document.getElementById("message").style.color = "green";
+                matchedPairs++;
+                first.img.style.border = "2px solid green";
+                second.img.style.border = "2px solid green";
+                first.img.onclick = null;
+                second.img.onclick = null;
+            } else {
+                document.getElementById("message").textContent = "Not Chiral. Impure bond!";
+                document.getElementById("message").style.color = "red";
+                setTimeout(() => {
+                    first.img.style.border = "2px solid transparent";
+                    second.img.style.border = "2px solid transparent";
+                }, 1000);
+            }
+            selected = [];
+            if (matchedPairs === 5) {
+                document.getElementById("message").textContent = "Purity Achieved!";
+                document.getElementById("message").style.color = "blue";
+            }
+        }
+
+        createGameBoard();
+    </script>
 </body>
 </html>
