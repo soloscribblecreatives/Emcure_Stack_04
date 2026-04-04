@@ -247,10 +247,10 @@
 
 .pat2 {
   position: absolute;
-  left: 204px;
-  top: 35px;
-  width: 673px;
-  height: 112px;
+  left: 164px;
+  top: 43px;
+  width: 751px;
+  height: 96px;
   animation: fadeInUp 0.5s;
   animation-delay: 1s;
   animation-fill-mode: both;
@@ -368,10 +368,10 @@
 
 .pat11 {
   position: absolute;
-  left: 0px;
-  top: 652px;
-  width: 1080px;
-  height: 158px;
+  left: 112px;
+  top: 704px;
+  width: 855px;
+  height: 84px;
   animation: fadeInUp 0.5s;
   animation-delay: 5s;
   animation-fill-mode: both;
@@ -415,12 +415,57 @@
 	z-index: 70;
 }
 
+.met1 {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 1080px;
+  height: 810px;
+  display: none;
+  z-index: 65;
+}
+
+.met2 {
+  position: absolute;
+  left: 431px;
+  top: 351px;
+  width: 228px;
+  height: 65px;
+  animation: zoomIn 0.5s;
+  animation-delay: 0s;
+  animation-fill-mode: both;
+  display: none;
+  z-index: 70;
+}
+.met3 {
+  position: absolute;
+  left: 431px;
+  top: 351px;
+  width: 228px;
+  height: 65px;
+  animation: flashOff 0.5s infinite;
+  animation-delay: 0.5s;
+  animation-fill-mode: both;
+  display: none;
+  z-index: 75;
+}
+
+.button5 {
+	position: absolute;
+  left: 367px;
+  top: 306px;
+  width: 357px;
+  height: 155px;
+	display: none;
+	z-index: 80;
+}
+
 .video4 {
 	position: absolute;
 	width: 1080px;
 	height: 810px;
 	display: none;
-	z-index: 70;
+	z-index: 90;
 }
 
 @keyframes flashOff {
