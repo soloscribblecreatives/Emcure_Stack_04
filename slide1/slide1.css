@@ -12,10 +12,10 @@
 
 .start1 {
   position: absolute;
-  left: 439px;
-  top: 571px;
-  width: 219px;
-  height: 70px;
+  left: 419px;
+  top: 437px;
+  width: 211px;
+  height: 211px;
   animation: zoomIn 0.5s;
   animation-delay: 0s;
   animation-fill-mode: both;
@@ -25,10 +25,10 @@
 
 .start2 {
   position: absolute;
-  left: 439px;
-  top: 571px;
-  width: 219px;
-  height: 70px;
+  left: 419px;
+  top: 437px;
+  width: 211px;
+  height: 211px;
   animation: flashOff 0.5s infinite;
   animation-delay: 0.5s;
   animation-fill-mode: both;
@@ -58,12 +58,20 @@
 	z-index: 10;
 }
 
+.video3 {
+	position: absolute;
+	width: 1080px;
+	height: 810px;
+	display: none;
+	z-index:10;
+}
+
 .button2 {
 	position: absolute;
-	left: 324px;
-	top: 500px;
-	width: 450px;
-	height: 213px;
+  left: 419px;
+  top: 437px;
+  width: 211px;
+  height: 211px;
 	display: none;
 	z-index: 15;
 }
@@ -145,40 +153,40 @@
 
 .tick1 {
   position: absolute;
-  left: 232px;
-  top: 386px;
-  width: 68px;
-  height: 62px;
+  left: 304px;
+  top: 328px;
+  width: 47px;
+  height: 47px;
   display: none;
   z-index: 30;
 }
 
 .tick1on {
   position: absolute;
-  left: 168px;
-  top: 319px;
-  width: 196px;
-  height: 196px;
+  left: 292px;
+  top: 320px;
+  width: 590px;
+  height: 104px;
   display: none;
   z-index: 35;
 }
 
 .tick2 {
   position: absolute;
-  left: 524px;
-  top: 440px;
-  width: 67px;
-  height: 62px;
+  left: 304px;
+  top: 439px;
+  width: 47px;
+  height: 47px;
   display: none;
   z-index: 30;
 }
 
 .tick2on {
   position: absolute;
-  left: 460px;
-  top: 373px;
-  width: 196px;
-  height: 196px;
+  left: 292px;
+  top: 431px;
+  width: 590px;
+  height: 104px;
   display: none;
   z-index: 35;
 }
@@ -206,10 +214,10 @@
 
 .alert1 {
   position: absolute;
-  left: 281px;
-  top: 713px;
-  width: 518px;
-  height: 76px;
+  left: 209px;
+  top: 571px;
+  width: 662px;
+  height: 134px;
   display: none;
   z-index: 35;
 }
@@ -224,12 +232,12 @@
   z-index: 35;
 }
 
-.video3 {
+.video4 {
 	position: absolute;
 	width: 1080px;
 	height: 810px;
 	display: none;
-	z-index:40;
+	z-index: 40;
 }
 
 .pat1 {
@@ -460,7 +468,7 @@
 	z-index: 80;
 }
 
-.video4 {
+.video5 {
 	position: absolute;
 	width: 1080px;
 	height: 810px;

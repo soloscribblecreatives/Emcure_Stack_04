@@ -251,7 +251,7 @@ currentSlide();
 var selectedContentPath='';
 switch(pg_id){
 	case 1:
-	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="video1"><video autoplay loop poster="slide1/Poster.png" onplay="onPlay1()" onended="onEnded1()" id="video1" width="1080" height="810"><source src="slide1/Part1.mp4" type="video/mp4"></video></div><div class="video2"><video onended="onEnded2()" id="video2" width="1080" height="810"><source src="slide1/Part2.mp4" type="video/mp4"></video></div><div class="video3"><video onended="onEnded3()" id="video3" width="1080" height="810"><source src="slide1/Part3.mp4" type="video/mp4"></video></div><div class="video4"><video onended="onEnded4()" id="video4" width="1080" height="810"><source src="slide1/Part4.mp4" type="video/mp4"></video></div><div class="start1"><img src="slide1/start1.png"></div><div class="start2"><img src="slide1/start2.png"></div><div class="button1" onclick="playVid1()"></div><div class="button2" onclick="playVid2()"></div><div class="war1"><img src="slide1/war1.png"></div><div class="war2"><img src="slide1/war2.png"></div><div class="war3"><img src="slide1/war3.png"></div><div class="war4"><img src="slide1/war4.png"></div><div class="war5"><img src="slide1/war5.png"></div><div class="war6"><img src="slide1/war6.png"></div><div class="tick1"><img src="slide1/tick1.png"></div><div class="tick2"><img src="slide1/tick2.png"></div><div class="tick3"><img src="slide1/tick3.png"></div><div class="alert1"><img src="slide1/alert1.png"></div><div class="alert2"><img src="slide1/alert2.png"></div><div class="tick1on" onclick="tick1on()"></div><div class="tick2on" onclick="tick2on()"></div><div class="tick3on" onclick="tick3on()"></div><audio id="correct" src="slide1/Correct.mp3" type="audio/mpeg"></audio><audio id="wrong" src="slide1/wrong.mp3" type="audio/mpeg"></audio><div class="pat1"><img src="slide1/pat1.png"></div><div class="pat2"><img src="slide1/pat2.png"></div><div class="pat3"><img src="slide1/pat3.png"></div><div class="pat4"><img src="slide1/pat4.png"></div><div class="pat5"><img src="slide1/pat5.png"></div><div class="pat6"><img src="slide1/pat6.png"></div><div class="pat7"><img src="slide1/pat7.png"></div><div class="pat8"><img src="slide1/pat8.png"></div><div class="pat9"><img src="slide1/pat9.png"></div><div class="pat10"><img src="slide1/pat10.png"></div><div class="pat11"><img src="slide1/pat11.png"></div><div class="pat12"><img src="slide1/pat12.png"></div><div class="pat13"><img src="slide1/pat13.png"></div><div class="button4" onclick="playMet()"></div><div class="met1"><img src="slide1/met1.png"></div><div class="met2"><img src="slide1/met2.png"></div><div class="met3"><img src="slide1/met3.png"></div><div class="button5" onclick="playVid4()"></div>';
+	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="video1"><video autoplay loop poster="slide1/Poster.png" onplay="onPlay1()" onended="onEnded1()" id="video1" width="1080" height="810"><source src="slide1/Part1.mp4" type="video/mp4"></video></div><div class="video2"><video onended="onEnded2()" id="video2" width="1080" height="810"><source src="slide1/Part2.mp4" type="video/mp4"></video></div><div class="video3"><video onended="onEnded3()" id="video3" width="1080" height="810"><source src="slide1/Part3.mp4" type="video/mp4"></video></div><div class="video4"><video onended="onEnded4()" id="video4" width="1080" height="810"><source src="slide1/Part4.mp4" type="video/mp4"></video></div><div class="video5"><video onended="onEnded5()" id="video5" width="1080" height="810"><source src="slide1/Part5.mp4" type="video/mp4"></video></div><div class="start1"><img src="slide1/start1.png"></div><div class="start2"><img src="slide1/start2.png"></div><div class="button1" onclick="playVid1()"></div><div class="button2" onclick="playVid2()"></div><div class="war1"><img src="slide1/war1.png"></div><div class="war2"><img src="slide1/war2.png"></div><div class="war3"><img src="slide1/war3.png"></div><div class="war4"><img src="slide1/war4.png"></div><div class="war5"><img src="slide1/war5.png"></div><div class="war6"><img src="slide1/war6.png"></div><div class="tick1"><img src="slide1/tick1.png"></div><div class="tick2"><img src="slide1/tick2.png"></div><div class="tick3"><img src="slide1/tick3.png"></div><div class="alert1"><img src="slide1/alert1.png"></div><div class="alert2"><img src="slide1/alert2.png"></div><div class="tick1on" onclick="tick1on()"></div><div class="tick2on" onclick="tick2on()"></div><div class="tick3on" onclick="tick3on()"></div><audio id="correct" src="slide1/correct.mp3" type="audio/mpeg"></audio><audio id="wrong" src="slide1/wrong.mp3" type="audio/mpeg"></audio><audio id="ding" src="slide1/ding.mp3" type="audio/mpeg"></audio><div class="pat1"><img src="slide1/pat1.png"></div><div class="pat2"><img src="slide1/pat2.png"></div><div class="pat3"><img src="slide1/pat3.png"></div><div class="pat4"><img src="slide1/pat4.png"></div><div class="pat5"><img src="slide1/pat5.png"></div><div class="pat6"><img src="slide1/pat6.png"></div><div class="pat7"><img src="slide1/pat7.png"></div><div class="pat8"><img src="slide1/pat8.png"></div><div class="pat9"><img src="slide1/pat9.png"></div><div class="pat10"><img src="slide1/pat10.png"></div><div class="pat11"><img src="slide1/pat11.png"></div><div class="pat12"><img src="slide1/pat12.png"></div><div class="pat13"><img src="slide1/pat13.png"></div><div class="button4" onclick="playMet()"></div><div class="met1"><img src="slide1/met1.png"></div><div class="met2"><img src="slide1/met2.png"></div><div class="met3"><img src="slide1/met3.png"></div><div class="button5" onclick="playVid5()"></div>';
 	break;
 }
 
@@ -436,10 +436,19 @@ function playVid2() {
 }
 
 function onEnded2() {
-	$('.war1, .war2, .war3, .war4, .war5, .war6').css("display","block");
+	$(".video2").css("display","none");
+	var vid = document.getElementById("video2");
+	vid.pause();
+	vid.currentTime = 0;
+	$(".video3").css("display","block");
+	document.getElementById("video3").play();
+}
+
+function onEnded3() {
+	$('.war1').css("display","block");
 	setTimeout(function(){ 
-		$('.tick1on, .tick2on, .tick3on').css("display","block");
-	}, 1000);
+		$('.tick1on, .tick2on').css("display","block");
+	}, 0000);
 }
 
 function tick1on() {
@@ -451,13 +460,13 @@ function tick1on() {
 	$(".tick3").css("display","none");
 	$('.tick1on, .tick2on, .tick3on').css("display","none");
 	setTimeout(function(){ 
-		$(".video2").css("display","none");
-		var vid = document.getElementById("video2");
+		$(".video3").css("display","none");
+		var vid = document.getElementById("video3");
 		vid.pause();
 		vid.currentTime = 0;
-		$(".video3").css("display","block");
-		document.getElementById("video3").play();
-	}, 2000);
+		$(".video4").css("display","block");
+		document.getElementById("video4").play();
+	}, 1000);
 }
 
 function tick2on() {
@@ -469,13 +478,13 @@ function tick2on() {
 	$(".tick3").css("display","none");
 	$('.tick1on, .tick2on, .tick3on').css("display","none");
 	setTimeout(function(){ 
-		$(".video2").css("display","none");
-		var vid = document.getElementById("video2");
+		$(".video3").css("display","none");
+		var vid = document.getElementById("video3");
 		vid.pause();
 		vid.currentTime = 0;
-		$(".video3").css("display","block");
-		document.getElementById("video3").play();
-	}, 2000);
+		$(".video4").css("display","block");
+		document.getElementById("video4").play();
+	}, 1000);
 }
 
 function tick3on() {
@@ -489,7 +498,7 @@ function tick3on() {
 	$('.tick3on').css("display","none");
 }
 
-function onEnded3() {
+function onEnded4() {
 	$('.pat1, .pat2, .pat3, .pat4, .pat5, .pat6, .pat7, .pat8, .pat9, .pat10, .pat11, .pat12, .pat13').css("display","block");
 	setTimeout(function(){ 
 		$('.button4').css("display","block");
@@ -497,17 +506,18 @@ function onEnded3() {
 }
 
 function playMet() {
+	document.getElementById("ding").play();
 	$('.button4').css("display","none");
 	$('.button5').css("display","block");
 	$('.met1, .met2, .met3').css("display","block");
 }
 
-function playVid4() {
+function playVid5() {
 	$('.button5').css("display","none");
-	$(".video3").css("display","none");
-	var vid = document.getElementById("video3");
+	$(".video4").css("display","none");
+	var vid = document.getElementById("video4");
 	vid.pause();
 	vid.currentTime = 0;
-	$(".video4").css("display","block");
-	document.getElementById("video4").play();
+	$(".video5").css("display","block");
+	document.getElementById("video5").play();
 }
