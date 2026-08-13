@@ -2,15 +2,15 @@
 	margin: 0px;
 	padding: 0px;
 }
-
+.s1 img{height:775px !important;}
 body {
 	background-color: #fff;
 	font-family: 'DINOT', 'Helvetica Neue', sans-serif;
 }
 #container {
 	position: absolute;
-	width: 1080px;
-	height: 810px;
+	width: 1180px;
+	height: 775px;
 	background-color: #232E3D;
 	font-family: 'DINOT', 'Helvetica Neue', sans-serif;
 	overflow: hidden;
@@ -69,9 +69,9 @@ html[xmlns] .clearfix {
 }
 #wrapper {
 	width: 100%;
-	max-width: 1080px;
+	max-width: 1180px;
 	height: 100%;
-	min-height: 810px;
+	min-height: 775px;
 	margin: 0 auto;
 	background-size: 100% auto;
 	position: relative;
@@ -90,9 +90,9 @@ html[xmlns] .clearfix {
 }
 #wrapper[rel~="2"] {
 	width: 100%;
-	max-width: 1080px;
+	max-width: 1180px;
 	height: 100%;
-	min-height: 810px;
+	min-height: 775px;
 	margin: 0 auto;
 	background-size: 100% auto;
 	position: relative;
@@ -107,31 +107,34 @@ html[xmlns] .clearfix {
 }
 .slide_arrow {
 	position: relative;
-	top: 380px;
+	top: 330px;
 	opacity: .8;
-	display: block;
 	z-index: 999;
+	display: none;
 	visibility: visible;
 }
 .left_arrow {
-	float: left;
+	display: flex;
+    justify-content: center;
 	position: absolute;
 	left: 45px;
 	cursor: pointer;
 	z-index: 999;
 	top: 3px;
 	width: 27px;
-	height: 52px;
+	height: 27px;
 	visibility: visible;
 }
 .right_arrow {
-	float: right;
+	display: flex;
+    justify-content: center;
 	position: absolute;
-	right: 40px;
+	right: 45px;
 	cursor: pointer;
 	z-index: 999;
+	top: 3px;
 	width: 27px;
-	height: 52px;
+	height: 27px;
 	visibility: visible;
 }
 .reference {
@@ -141,7 +144,7 @@ html[xmlns] .clearfix {
 }
 .reference .box {
 	position: absolute;
-	width: 1080px;
+	width: 1180px;
 	margin: 0 auto;
 	padding: 0px 0px 0px;
 	border: 1px solid #ccc;	
@@ -160,6 +163,7 @@ html[xmlns] .clearfix {
 	-webkit-transition: bottom 5s, -webkit-transform 2s;
 	transition: bottom 1s, -webkit-transform 2s;
 	visibility: visible;
+	display: none;
 	z-index: 999;
 }
 .slide_jumper {
@@ -174,7 +178,7 @@ html[xmlns] .clearfix {
 	margin: 0 5px;
 	display: inline-block;
 	white-space: nowrap;
-	width: 180px;
+	width: 205px;
 	vertical-align: top;
 	padding: 4px;
 	background-color: rgba(0, 163, 228, 0.4);
@@ -199,7 +203,6 @@ html[xmlns] .clearfix {
 	position: absolute;
 	bottom: 0px;
 	left: 38px;
-	display: block;
 	width: 56px;
 	height: 20px;
 	border-radius: 5px 5px 0 0;
@@ -209,6 +212,7 @@ html[xmlns] .clearfix {
 	-webkit-transition: bottom 1s, -webkit-transform 2s;
 	transition: bottom 1s, -webkit-transform 2s;
 	visibility: visible;
+	display: none;
 	z-index: 999;
 }
 .reference.active {
@@ -236,4 +240,13 @@ html[xmlns] .clearfix {
 	border: 1px solid red;
 	background-color: rgba(0,0,0,0.5);
 	color: #ffffff;
+}
+
+.blocker {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 1180px;
+	height: 775px;
+	z-index: 45;
 }

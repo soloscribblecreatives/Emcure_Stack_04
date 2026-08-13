@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8"/>
 <meta http-equiv="cache-control" content="max-age=200"/>
-<meta name="viewport" content="initial-scale=1, maximum-scale=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="chrome=1">
-<title>METPURE</title>
+<title>Soventus</title>
 <link rel="stylesheet" type="text/css" href="animate.css" media="screen"/>
 <link rel="stylesheet" type="text/css" href="global.css" media="screen"/>
 
@@ -17,21 +17,23 @@
 <body>
 <div id="wrapper" rel="1">
   <div class="slide_arrow">
-    <div class="left_arrow" ><img src="left_arrow.png" alt="previous icon" width="23" height="23" ></div>
-    <div class="right_arrow" ><img src="right_arrow.png" alt="next icon" width="23" height="23"></div>
+    <div class="left_arrow" ><img src="left_arrow.png" alt="previous icon" width="27" height="27" ></div>
+    <div class="right_arrow" ><img src="right_arrow.png" alt="next icon" width="27" height="27"></div>
   </div>
   <div id="main_content"></div>
   <div class="reference active">
     <div class="box">
       <div class="slide_jumper">
-		  <div class="slides"><img src="thumbs/01.png" alt=""></div>
+		  <div class="slides"><img src="thumbs/01.png" alt=""></div>        
+		  <div class="slides"><img src="thumbs/02.png" alt=""></div>      
       </div>
     </div>
     <div class="box_btn"></div>
+	<div id="myconsole"></div>
+	<div id="click_through"></div>
   </div>
 </div>
-<div id="myconsole"></div>
-<div id="click_through" > </div>
+
 <script src="global.js" type="text/javascript" language="javascript"></script> 
 <script>
 $(document).ready(function(){
@@ -41,7 +43,7 @@ $(document).ready(function(){
 var selectedContentPath = 'slide1/';
 //  document.getElementById("main_content").innerHTML='<object type="text/html" width="1080px" height="810px" data="'+selectedContentPath+"Dlight1.htm"+'"></object>';
 
-$("#main_content").html('<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="video1"><video autoplay loop poster="slide1/Poster.png" onplay="onPlay1()" onended="onEnded1()" id="video1" width="1080" height="810"><source src="slide1/Part1.mp4" type="video/mp4"></video></div><div class="video2"><video onended="onEnded2()" id="video2" width="1080" height="810"><source src="slide1/Part2.mp4" type="video/mp4"></video></div><div class="video3"><video onended="onEnded3()" id="video3" width="1080" height="810"><source src="slide1/Part3.mp4" type="video/mp4"></video></div><div class="video4"><video onended="onEnded4()" id="video4" width="1080" height="810"><source src="slide1/Part4.mp4" type="video/mp4"></video></div><div class="video5"><video onended="onEnded5()" id="video5" width="1080" height="810"><source src="slide1/Part5.mp4" type="video/mp4"></video></div><div class="start1"><img src="slide1/start1.png"></div><div class="start2"><img src="slide1/start2.png"></div><div class="button1" onclick="playVid1()"></div><div class="button2" onclick="playVid2()"></div><div class="war1"><img src="slide1/war1.png"></div><div class="war2"><img src="slide1/war2.png"></div><div class="war3"><img src="slide1/war3.png"></div><div class="war4"><img src="slide1/war4.png"></div><div class="war5"><img src="slide1/war5.png"></div><div class="war6"><img src="slide1/war6.png"></div><div class="tick1"><img src="slide1/tick1.png"></div><div class="tick2"><img src="slide1/tick2.png"></div><div class="tick3"><img src="slide1/tick3.png"></div><div class="alert1"><img src="slide1/alert1.png"></div><div class="alert2"><img src="slide1/alert2.png"></div><div class="tick1on" onclick="tick1on()"></div><div class="tick2on" onclick="tick2on()"></div><div class="tick3on" onclick="tick3on()"></div><audio id="correct" src="slide1/correct.mp3" type="audio/mpeg"></audio><audio id="wrong" src="slide1/wrong.mp3" type="audio/mpeg"></audio><audio id="ding" src="slide1/ding.mp3" type="audio/mpeg"></audio><div class="pat1"><img src="slide1/pat1.png"></div><div class="pat2"><img src="slide1/pat2.png"></div><div class="pat3"><img src="slide1/pat3.png"></div><div class="pat4"><img src="slide1/pat4.png"></div><div class="pat5"><img src="slide1/pat5.png"></div><div class="pat6"><img src="slide1/pat6.png"></div><div class="pat7"><img src="slide1/pat7.png"></div><div class="pat8"><img src="slide1/pat8.png"></div><div class="pat9"><img src="slide1/pat9.png"></div><div class="pat10"><img src="slide1/pat10.png"></div><div class="pat11"><img src="slide1/pat11.png"></div><div class="pat12"><img src="slide1/pat12.png"></div><div class="pat13"><img src="slide1/pat13.png"></div><div class="button4" onclick="playMet()"></div><div class="met1"><img src="slide1/met1.png"></div><div class="met2"><img src="slide1/met2.png"></div><div class="met3"><img src="slide1/met3.png"></div><div class="button5" onclick="playVid5()"></div>');
+$("#main_content").html('<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="s1"><img src="slide1/s1.png" width="1180" height="775" alt=""/></div><div class="s2"><img src="slide1/s2.png"/></div><div class="s3 rotate"><img src="slide1/s3.png"/></div><div class="s4"><video loop autoplay muted width="1180" height="775"><source src="slide1/s4.mp4" type="video/mp4"></video></div><div class="s5"><img src="slide1/s5.png"/></div><div class="s6"><img src="slide1/s6.png"/></div><div class="s7"><img src="slide1/s7.png"/></div><div class="s8"><img src="slide1/s8.png"/></div>');
 
 });
 </script> 
